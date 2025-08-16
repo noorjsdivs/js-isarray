@@ -1,6 +1,6 @@
 {
   "name": "js-isarray",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A modern TypeScript utility for robust array validation with enhanced features",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

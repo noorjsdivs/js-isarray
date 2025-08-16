@@ -60,19 +60,15 @@ import isArray from 'js-isarray';  // Works exactly the same
 
 **Bonus**: You also get 11 additional validators and TypeScript support! 🎉
 
+```typescript
+// Your existing code works exactly the same
 isArray([1, 2, 3]); // true
+isArray("string"); // false
 
-````
-
-### Migration from `is-array`
-
-```bash
-# Before
-npm uninstall is-array
-npm install js-isarray
-
-# No code changes needed!
-# Your existing code will work exactly the same
+// Plus you get these new validators:
+isStringArray(["hello", "world"]); // true
+isNumberArray([1, 2, 3]); // true
+validateArray([1, 2], { minLength: 2, elementType: "number" }); // true
 ```
 
 ### Migration Benefits
@@ -751,4 +747,7 @@ MIT © [noorjsdivs](https://github.com/noorjsdivs)
 **Made with ❤️ and TypeScript**
 
 _If this package helped you, please consider giving it a ⭐ on [GitHub](https://github.com/noorjsdivs/js-isarray)!_
-````
+
+```
+
+```
