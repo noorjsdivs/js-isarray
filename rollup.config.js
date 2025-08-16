@@ -13,7 +13,7 @@ export default [
       file: pkg.main,
       format: "cjs",
       exports: "auto",
-      sourcemap: true,
+      sourcemap: false,
     },
     plugins: [
       resolve(),
@@ -22,6 +22,7 @@ export default [
         declaration: true,
         declarationDir: "dist",
         rootDir: "src",
+        declarationMap: false,
       }),
     ],
   },
@@ -31,7 +32,7 @@ export default [
     output: {
       file: pkg.module,
       format: "esm",
-      sourcemap: true,
+      sourcemap: false,
     },
     plugins: [
       resolve(),

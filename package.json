@@ -38,16 +38,16 @@
     "javascript",
     "utility"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Noor Mohammad <https://github.com/noorjsdivs>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/enhanced-is-array.git"
+    "url": "git+https://github.com/noorjsdivs/js-isarray.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/enhanced-is-array/issues"
+    "url": "https://github.com/noorjsdivs/js-isarray/issues"
   },
-  "homepage": "https://github.com/yourusername/enhanced-is-array#readme",
+  "homepage": "https://github.com/noorjsdivs/js-isarray#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
