@@ -1,92 +1,67 @@
 # js-isarray
 
-A modern TypeScrip## Quick Start
+> A modern TypeScript-first array validation library with 12+ powerful validators and zero dependencies.
 
-````typescript
-import { isArray, isStringArray, validateArray } from 'js-isarray';
+[![npm version](https://badge.fury.io/js/js-isarray.svg)](https://badge.fury.io/js/js-isarray)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
+[![Buy Me A Coffee](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-orange.svg?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/reactbd)
 
-// Basic array checking (backwards compatible)
+**Why js-isarray?**
+
+- 🚀 **Drop-in replacement** for the classic `is-array` package
+- 🎯 **TypeScript-first** with proper type guards
+- � **12+ validators** beyond basic `isArray()`
+- 📦 **Tiny footprint** - only 8.9KB, zero dependencies
+- ✨ **Modern tooling** - ESM, CommonJS, and full TypeScript support
+
+## 🚀 Quick Start
+
+```bash
+npm install js-isarray
+```
+
+```typescript
+import { isArray, isStringArray, validateArray } from "js-isarray";
+
+// Basic (backwards compatible with is-array)
 isArray([1, 2, 3]); // true
-isArray('not array'); // false
 
 // Type-specific validation
-isStringArray(['hello', 'world']); // true
-isStringArray(['hello', 123]); // false
+isStringArray(["hello", "world"]); // true
+isStringArray(["hello", 123]); // false
 
-// Advanced validation
+// Complex validation
 validateArray([1, 2, 3], {
   minLength: 2,
   maxLength: 5,
-  elementType: 'number'
+  elementType: "number",
 }); // true
-```r robust array validation with enhanced features. This package provides a compreh## 🔄 Backwards Compatibility
+```
 
-This package is des## 🚀 Getting Started
+## ✨ Features
 
-### Basic Setup
+- 🔧 **12+ validators** - `isStringArray`, `isNumberArray`, `validateArray`, etc.
+- 🎯 **TypeScript-first** - Built-in type guards, no `@types` needed
+- 📦 **Universal** - Works in Node.js, browsers, React, Vue, Angular
+- ⚡ **Lightweight** - 8.9KB gzipped, zero dependencies
+- 🔄 **Compatible** - Drop-in replacement for `is-array`
+
+## 🔄 Migration from is-array
 
 ```bash
-# Install the package
+# Replace this
+npm uninstall is-array
 npm install js-isarray
-````
 
-```typescript
-// Import what you need
-import { isArray, isStringArray, validateArray } from "js-isarray";
-
-// Start validating!
-console.log(isArray([1, 2, 3])); // true
+# No code changes needed - fully compatible!
+import isArray from 'js-isarray';  // Works exactly the same
 ```
 
-### Quick Examples
-
-```typescript
-// ✅ Basic array checking
-if (isArray(userInput)) {
-  console.log("Got an array with", userInput.length, "items");
-}
-
-// ✅ Type-specific validation
-if (isStringArray(formData.tags)) {
-  const uppercased = formData.tags.map((tag) => tag.toUpperCase());
-}
-
-// ✅ Advanced validation
-if (validateArray(scores, { elementType: "number", minLength: 3 })) {
-  const average = scores.reduce((a, b) => a + b, 0) / scores.length;
-}
-```
-
-### TypeScript Integration
-
-This package provides **excellent TypeScript support** out of the box:
-
-````typescript
-function processUserData(data: unknown) {
-  // TypeScript doesn't know what 'data' is
-
-  if (isStringArray(data)) {
-    // ✅ Now TypeScript knows data is string[]
-    data.forEach(item => console.log(item.toUpperCase()));
-    //                                   ^^^^^^^^^^^
-    //                            TypeScript knows this is safe!
-  }
-}
-```a **drop-in replacement** for the original `is-array` package with zero breaking changes:
-
-```typescript
-// ✅ Works exactly like the original is-array
-import isArray from 'js-isarray';
-
-isArray([]); // true
-isArray('string'); // false
-isArray(null); // false
-isArray(undefined); // false
-
-// ✅ Also works with named import
-import { isArray } from 'js-isarray';
+**Bonus**: You also get 11 additional validators and TypeScript support! 🎉
 
 isArray([1, 2, 3]); // true
+
 ````
 
 ### Migration from `is-array`
@@ -104,26 +79,15 @@ npm install js-isarray
 
 When you upgrade from `is-array` to `js-isarray`, you get:
 
-- ✅ **Same API** - Zero breaking changes
+## Features
+
+- ✅ **Same API** - Zero breaking changes from original is-array
 - ✅ **Better TypeScript** - Built-in type guards (no more `@types/is-array`)
 - ✅ **Enhanced Features** - 12+ additional validation functions
 - ✅ **Modern Build** - ESM + CommonJS + TypeScript declarations
-- ✅ **Active Maintenance** - Regular updates and bug fixesof type-safe array validation functions that go far beyond the basic `Array.isArray()` check.
-
-[![npm version](https://badge.fury.io/js/js-isarray.svg)](https://badge.fury.io/js/js-isarray)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
-[![Buy Me A Coffee](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-orange.svg?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/reactbd)
-
-## Features
-
-- 🚀 **Modern TypeScript**: Full TypeScript support with proper type guards
-- 🔍 **Enhanced Validation**: Beyond basic array checking
-- 📦 **Multiple Formats**: CommonJS, ESM, and TypeScript declarations
-- 🎯 **Type Safety**: Comprehensive type guards for better type inference
-- 🧪 **Well Tested**: 100% test coverage
-- 📘 **Zero Dependencies**: Lightweight and fast
-- 🔧 **Node & Browser**: Works everywhere JavaScript runs
+- ✅ **Active Maintenance** - Regular updates and bug fixes
+- 🔧 **Zero Dependencies** - Lightweight and fast
+- 🧪 **Well Tested** - 100% test coverage
 
 ## Installation
 
@@ -142,7 +106,7 @@ pnpm add js-isarray
 ## Quick Start
 
 ```typescript
-import { isArray, isStringArray, validateArray } from "enhanced-is-array";
+import { isArray, isStringArray, validateArray } from "js-isarray";
 
 // Basic array checking (backwards compatible)
 isArray([1, 2, 3]); // true
@@ -663,7 +627,7 @@ This package is designed to be a drop-in replacement for the original `is-array`
 
 ```typescript
 // Original is-array usage
-import isArray from "enhanced-is-array";
+import isArray from "js-isarray";
 
 isArray([]); // true
 isArray("string"); // false
@@ -787,3 +751,4 @@ MIT © [noorjsdivs](https://github.com/noorjsdivs)
 **Made with ❤️ and TypeScript**
 
 _If this package helped you, please consider giving it a ⭐ on [GitHub](https://github.com/noorjsdivs/js-isarray)!_
+````
